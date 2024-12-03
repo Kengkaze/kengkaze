@@ -1,0 +1,104 @@
+/* พื้นหลังแบบ Galaxy Gradient พร้อม Animation */
+body {
+    font-family: 'Poppins', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background: radial-gradient(circle, #1a1a3f, #27275d, #602d98, #982d98, #601f78);
+    background-size: 200% 200%;
+    animation: galaxyAnimation 10s ease infinite;
+  }
+  
+  @keyframes galaxyAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* กล่องฟอร์ม */
+  .container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 320px;
+    min-height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    animation: slideIn 1s ease-out;
+  }
+  
+  @keyframes slideIn {
+    0% {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* ปุ่ม */
+  button {
+    width: 100%;
+    padding: 12px;
+    background-color: #602d98;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #982d98;
+    box-shadow: 0 8px 20px rgba(152, 45, 152, 0.6);
+    transform: scale(1.05);
+  }
+  
+  /* ข้อความแสดงผล */
+  .hidden {
+    display: none;
+  }
+  
+  #message {
+    margin-top: 20px;
+    font-size: 20px;
+    color: red;
+  }
+  
+  /* ลิงก์ */
+  a {
+    color: #602d98;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+  }
+  
+  a:hover {
+    color: #982d98;
+  }
+  
+  /* ข้อความแสดงข้อผิดพลาด */
+  .error-message {
+    color: red;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: left;
+    animation: shake 0.4s ease;
+  }
+  
+  @keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-4px); }
+    50% { transform: translateX(4px); }
+    75% { transform: translateX(-4px); }
+  }  
